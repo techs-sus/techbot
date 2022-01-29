@@ -1,0 +1,21 @@
+{
+	"name": "techbot",
+	"type": "module",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/techs-sus/techbot.git",
+	"license": "MIT",
+	"private": true,
+	"packageManager": "yarn@3.1.1",
+	"scripts": {
+		"dev": "nodemon src/index.js",
+		"start": "node src/index.js"
+	},
+	"dependencies": {
+		"he": "^1.2.0",
+		"socket.io-client": "^4.4.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	}
+}
