@@ -35,10 +35,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@types/axios", "npm:0.14.0"],
             ["@types/he", "npm:1.1.2"],
             ["@types/node", "npm:17.0.13"],
             ["@types/socket.io-client", "npm:1.4.36"],
-            ["chalk", "npm:5.0.0"],
+            ["axios", "npm:0.25.0"],
             ["he", "npm:1.2.0"],
             ["socket.io-client", "npm:2.4.0"],
             ["ts-node", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:10.4.0"],
@@ -139,6 +140,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@tsconfig-node16-npm-1.0.2-1f43ab567a-ca94d36397.zip/node_modules/@tsconfig/node16/",
           "packageDependencies": [
             ["@tsconfig/node16", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/axios", [
+        ["npm:0.14.0", {
+          "packageLocation": "./.yarn/cache/@types-axios-npm-0.14.0-42f41917ea-12a230b940.zip/node_modules/@types/axios/",
+          "packageDependencies": [
+            ["@types/axios", "npm:0.14.0"],
+            ["axios", "npm:0.25.0"]
           ],
           "linkType": "HARD",
         }]
@@ -315,6 +326,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["axios", [
+        ["npm:0.25.0", {
+          "packageLocation": "./.yarn/cache/axios-npm-0.25.0-a1c287d287-2a8a3787c0.zip/node_modules/axios/",
+          "packageDependencies": [
+            ["axios", "npm:0.25.0"],
+            ["follow-redirects", "virtual:a1c287d287cceec925a9c0ff143359f3710be8008f8559da00a15e4d93f76849e9493b8b7760d073ae605ea56d1482d54174c007b28cbf6b38332d152576190f#npm:1.14.7"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["backo2", [
         ["npm:1.0.2", {
           "packageLocation": "./.yarn/cache/backo2-npm-1.0.2-e933aab18a-fda8d0a0f4.zip/node_modules/backo2/",
@@ -413,15 +434,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ssri", "npm:8.0.1"],
             ["tar", "npm:6.1.11"],
             ["unique-filename", "npm:1.1.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["chalk", [
-        ["npm:5.0.0", {
-          "packageLocation": "./.yarn/cache/chalk-npm-5.0.0-7be183234e-6eba7c518b.zip/node_modules/chalk/",
-          "packageDependencies": [
-            ["chalk", "npm:5.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -682,6 +694,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["fill-range", "npm:7.0.1"],
             ["to-regex-range", "npm:5.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["follow-redirects", [
+        ["npm:1.14.7", {
+          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.14.7-c87c16ed59-f6d03e5e30.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "npm:1.14.7"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:a1c287d287cceec925a9c0ff143359f3710be8008f8559da00a15e4d93f76849e9493b8b7760d073ae605ea56d1482d54174c007b28cbf6b38332d152576190f#npm:1.14.7", {
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-c5047b1a61/0/cache/follow-redirects-npm-1.14.7-c87c16ed59-f6d03e5e30.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "virtual:a1c287d287cceec925a9c0ff143359f3710be8008f8559da00a15e4d93f76849e9493b8b7760d073ae605ea56d1482d54174c007b28cbf6b38332d152576190f#npm:1.14.7"],
+            ["@types/debug", null],
+            ["debug", null]
+          ],
+          "packagePeers": [
+            "@types/debug",
+            "debug"
           ],
           "linkType": "HARD",
         }]
@@ -1631,10 +1665,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["techbot", "workspace:."],
+            ["@types/axios", "npm:0.14.0"],
             ["@types/he", "npm:1.1.2"],
             ["@types/node", "npm:17.0.13"],
             ["@types/socket.io-client", "npm:1.4.36"],
-            ["chalk", "npm:5.0.0"],
+            ["axios", "npm:0.25.0"],
             ["he", "npm:1.2.0"],
             ["socket.io-client", "npm:2.4.0"],
             ["ts-node", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:10.4.0"],
