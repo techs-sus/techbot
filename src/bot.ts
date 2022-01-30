@@ -43,14 +43,12 @@ class bot {
     this.onUserLeft = () => null;
   }
   async getVersion() {
-    axios
-      .get("https://api.github.com/repos/techs-sus/techbot/commits/main")
-      .then((res) => {
-        this.version = res.data.sha.slice(0, 7);
-        this.versionInfo.commitId = this.version;
-        this.versionInfo.commitReason = res.data.commit.message;
-      })
-      .catch(() => (this.version = "cannot resolve"));
+    let res = await axios.get(
+      "https://api.github.com/repos/techs-sus/techbot/commits/main"
+    );
+    this.version = res.data.sha.slice(0, 7);
+    this.versionInfo.commitId = this.version;
+    this.versionInfo.commitReason = res.data.commit.message;
   }
   sendMessage(message: string) {
     this.socket.emit("message", message);
