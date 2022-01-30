@@ -18,7 +18,7 @@ instance.onMessage = (_data) => {
         break;
       case "help":
         instance.sendMessage(
-          `techbot (git & node edition);\nRunning on Node ${process.version};\ncommitIds: ${instance.versionInfo.commitId} (${instance.versionInfo.commitReason});\ncommands:\n- version; usage -> Shows the current version committed to github.\n- test; usage -> Test command to see if my code is stupid.\n- eval; !!root -> eval any code!\nRight now techbot is just bot.ts & a glorified switch statement!`
+          `techbot (git & node edition);\nRunning on Node ${process.version};\ncommitId: ${instance.versionInfo.commitId} (${instance.versionInfo.commitReason});\ncommands:\n- version; usage -> Shows the current version committed to github.\n- test; usage -> Test command to see if my code is stupid.\n- eval; !!root -> eval any code!\nRight now techbot is just bot.ts & a glorified switch statement!`
         );
         break;
       case "eval":
