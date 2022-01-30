@@ -17,4 +17,4 @@ it("should be able be able to say stuff", () => {
       resolve("bot said stuff hopefully")
     }, 2000);
   })
-});
+}, 10000);
