@@ -42,7 +42,7 @@ class bot {
     this.onUserJoined = () => null;
     this.onUserLeft = () => null;
   }
-  async getVersion() {
+  public async getVersion() {
     let res = await axios.get(
       "https://api.github.com/repos/techs-sus/techbot/commits/main"
     );
@@ -50,24 +50,24 @@ class bot {
     this.versionInfo.commitId = this.version;
     this.versionInfo.commitReason = res.data.commit.message;
   }
-  sendMessage(message: string) {
+  public sendMessage(message: string) {
     this.socket.emit("message", message);
   }
-  changeColor(color: string) {
+  public changeColor(color: string) {
     this.socket.emit("user joined", this.nickname, color);
     this.color = color;
   }
-  changeNickname(nickname: string) {
+  public changeNickname(nickname: string) {
     this.socket.emit("user joined", nickname, this.color);
     this.nickname = nickname;
   }
-  getNickname() {
+  public getNickname() {
     return this.nickname;
   }
-  getColor() {
+  public getColor() {
     return this.color;
   }
-  init() {
+  public init() {
     this.socket.on("message", this.onMessage);
     this.socket.on("user joined", this.onUserJoined);
     this.socket.on("user left", this.onUserLeft);
