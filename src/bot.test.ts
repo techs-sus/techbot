@@ -11,16 +11,16 @@ instance.init();
 
 function sleep(time = 2) {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(null), time * 1000);
+    setTimeout(() => resolve("dome sleeping"), time * 1000);
   });
 }
 
 it("should be able be able to say stuff", () => {
   return new Promise((resolve) => {
     instance.sendMessage("helo! " + new Date().getDay());
-    sleep(3).then(() => {
+    sleep(4).then(() => {
       expect(botsaidstuff).toBe(true);
-      resolve();
+      resolve("works");
     });
   });
 }, 10000);
