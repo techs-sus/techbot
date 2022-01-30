@@ -11,15 +11,16 @@ instance.init();
 
 function sleep(time = 2) {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(), time * 1000);
+    setTimeout(() => resolve(null), time * 1000);
   });
 }
 
 it("should be able be able to say stuff", () => {
   return new Promise((resolve) => {
     instance.sendMessage("helo! " + new Date().getDay());
-    await sleep(3);
-    expect(botsaidstuff).toBe(true);
-    resolve();
+    sleep(3).then(() => {
+      expect(botsaidstuff).toBe(true);
+      resolve();
+    });
   });
 }, 10000);
