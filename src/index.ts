@@ -7,7 +7,7 @@ instance.onMessage = (_data) => {
   data.msg = decode(_data.msg);
   if (data.msg.startsWith("e!")) {
     let split = data.msg.split(" ");
-    switch (split[0].slice(2, split[0].length)) {
+    switch (split[0].slice(2)) {
       case "test":
         instance.sendMessage("test");
         break;
@@ -18,7 +18,7 @@ instance.onMessage = (_data) => {
         break;
       case "help":
         instance.sendMessage(
-          `techbot;\nrunning on Node ${process.version};\nversion: ${instance.versionInfo.commitId} (${instance.versionInfo.commitReason});\ntechbot (git & node edition);\ncommands:\n- version; usage -> Shows the current version committed to github.\n- test; usage -> Test command to see if my code is stupid.\n- eval; !!root -> eval any code!\nRight now techbot is just bot.ts & a glorified switch statement!`
+          `techbot (git & node edition);\nRunning on Node ${process.version};\ncommitIds: ${instance.versionInfo.commitId} (${instance.versionInfo.commitReason});\ncommands:\n- version; usage -> Shows the current version committed to github.\n- test; usage -> Test command to see if my code is stupid.\n- eval; !!root -> eval any code!\nRight now techbot is just bot.ts & a glorified switch statement!`
         );
         break;
       case "eval":
