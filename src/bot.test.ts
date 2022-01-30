@@ -9,10 +9,12 @@ instance.onMessage = (msg) => {
 };
 instance.init();
 
-it("should be able be able to say stuff", (done) => {
-  instance.sendMessage("helo");
-  setInterval(() => {
-    expect(botsaidstuff).toBe(true);
-    done();
-  }, 1000);
+it("should be able be able to say stuff", () => {
+  return new Promise((resolve) => {
+    instance.sendMessage("helo");
+    setInterval(() => {
+      expect(botsaidstuff).toBe(true);
+      resolve("bot said stuff hopefully")
+    }, 2000);
+  })
 });

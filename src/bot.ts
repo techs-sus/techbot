@@ -38,6 +38,11 @@ class bot {
       commitId: "",
       commitReason: "",
     };
+    this.onMessage = () => null;
+    this.onUserJoined = () => null;
+    this.onUserLeft = () => null;
+  }
+  async getVersion() {
     axios
       .get("https://api.github.com/repos/techs-sus/techbot/commits/main")
       .then((res) => {
@@ -46,9 +51,6 @@ class bot {
         this.versionInfo.commitReason = res.data.commit.message;
       })
       .catch(() => (this.version = "cannot resolve"));
-    this.onMessage = () => null;
-    this.onUserJoined = () => null;
-    this.onUserLeft = () => null;
   }
   sendMessage(message: string) {
     this.socket.emit("message", message);
