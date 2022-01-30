@@ -5,6 +5,7 @@ let botsaidstuff = false;
 instance.onMessage = (msg) => {
   if (msg.msg == "helo! " + new Date().getDay()) {
     botsaidstuff = true;
+    console.log("yes");
   }
 };
 instance.init();
@@ -18,7 +19,7 @@ function sleep(time = 2) {
 it("should be able be able to say stuff", () => {
   return new Promise((resolve) => {
     instance.sendMessage("helo! " + new Date().getDay());
-    sleep(4).then(() => {
+    sleep(2).then(() => {
       expect(botsaidstuff).toBe(true);
       resolve("works");
     });
