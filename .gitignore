@@ -1,0 +1,3 @@
+# ignore ts things
+/dist
+tsconfig.tsbuildinfo
