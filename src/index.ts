@@ -48,6 +48,5 @@ instance.getVersion().then(() => {
 			}
 		}
 	};
+	instance.init();
 });
-
-instance.init();

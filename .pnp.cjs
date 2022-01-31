@@ -44,6 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["he", "npm:1.2.0"],
             ["jest", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:27.4.7"],
             ["socket.io-client", "npm:2.4.0"],
+            ["tbparty", "npm:0.1.1"],
             ["ts-jest", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:27.1.3"],
             ["ts-node", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:10.4.0"],
             ["ts-node-dev", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:1.1.8"],
@@ -4926,6 +4927,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["tbparty", [
+        ["npm:0.1.1", {
+          "packageLocation": "./.yarn/cache/tbparty-npm-0.1.1-8b672c77e5-0ac46f3a24.zip/node_modules/tbparty/",
+          "packageDependencies": [
+            ["tbparty", "npm:0.1.1"],
+            ["socket.io-client", "npm:2.4.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["techbot", [
         ["workspace:.", {
           "packageLocation": "./",
@@ -4940,6 +4951,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["he", "npm:1.2.0"],
             ["jest", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:27.4.7"],
             ["socket.io-client", "npm:2.4.0"],
+            ["tbparty", "npm:0.1.1"],
             ["ts-jest", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:27.1.3"],
             ["ts-node", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:10.4.0"],
             ["ts-node-dev", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:1.1.8"],
