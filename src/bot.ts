@@ -1,6 +1,6 @@
 // World record speedrun of coding a bot base; go!
 
-import io from "tbparty";
+import io from "socket.io-client";
 import axios from "axios";
 
 interface Message {
@@ -26,7 +26,10 @@ class bot {
 	constructor(nick: string, color: string, onFinished?: () => void) {
 		this.nickname = nick;
 		this.color = color;
-		this.socket = io();
+		this.socket = io("https://trollbox.party", {
+			path: "/api/v0/si",
+			transports: ["websocket"],
+		});
 		this.socket.on("_connected", () => {
 			this.socket.emit("user joined", nick, color);
 			if (onFinished) {
@@ -66,6 +69,9 @@ class bot {
 	}
 	getColor() {
 		return this.color;
+	}
+	disconnect() {
+		this.socket.disconnect();
 	}
 	init() {
 		this.socket.on("message", this.onMessage);
