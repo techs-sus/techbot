@@ -19,8 +19,8 @@ it("should be able be able to say stuff", () => {
 	return new Promise((resolve) => {
 		instance.sendMessage("helo! " + new Date().getDay());
 		sleep(5000).then(() => {
-			expect(botsaidstuff).toBe(true);
 			resolve("works");
+			expect(botsaidstuff).toBe(true);
 		});
 	});
 }, 10000);
