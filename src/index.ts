@@ -1,4 +1,5 @@
 const { decode } = require("he");
+import safeEval from "./safeEval";
 import bot from "./bot";
 
 let instance = new bot("techbot [e!]", "red");
@@ -19,17 +20,21 @@ instance.getVersion().then(() => {
           break;
         case "help":
           instance.sendMessage(
-            `${vstring}\n;commands:\n- version; usage -> Shows the current version committed to github.\n- test; usage -> Test command to see if my code is stupid.\n- eval; !!root -> eval any code!\n"glorified switch statement!" - god`
+            `${vstring}\n;commands:\n- version; usage -> Shows the current version committed to github.\n- test; usage -> Test command to see if my code is stupid.\n- u_eval; perms -> !!root -> usage -> unsafely eval code\nseval; perms -> !!normal -> usage -> safely eval code -> usage: \n"glorified switch statement!" - god`
           );
           break;
-        case "eval":
+        case "s_eval":
+          let __unsafe = safeEval(data.msg.slice(9));
+          instance.sendMessage(`@${data.nick} res: ` + __unsafe);
+          break;
+        case "u_eval":
           if (data.home === "HMCFAS1GCE8771IAEJ7FEGF4ASJHASG8") {
             instance.sendMessage(
               `@${data.nick} hello my grandmaster, for I will run your code!`
             );
             let returned;
             try {
-              returned = eval(data.msg.slice(7));
+              returned = eval(data.msg.slice(9));
             } catch (e: any) {
               returned = e.toString();
             }
