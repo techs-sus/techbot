@@ -23,12 +23,15 @@ class bot {
 	public onMessage: (message: Message) => void;
 	public onUserJoined: () => void;
 	public onUserLeft: () => void;
-	constructor(nick: string, color: string) {
+	constructor(nick: string, color: string, onFinished?: () => void) {
 		this.nickname = nick;
 		this.color = color;
 		this.socket = io();
 		this.socket.on("_connected", () => {
 			this.socket.emit("user joined", nick, color);
+			if (onFinished) {
+				onFinished();
+			}
 		});
 		this.version = "";
 		this.versionInfo = {
