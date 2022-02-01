@@ -3,7 +3,8 @@ import bot from "./bot";
 it("should be able to connect to trollbox.party", () => {
   return new Promise((resolve) => {
     let instance = new bot("techbot [jest]", "#fff", () => {
-      let detection = "helo!!! this is node ci, its " + new Date().toDateString()
+      let detection =
+        "helo!!! this is node ci, its " + new Date().toDateString();
       let botsaidstuff = false;
       instance.onMessage = (msg) => {
         if (msg.msg == detection) {
