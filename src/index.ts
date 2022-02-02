@@ -1,5 +1,5 @@
 const { decode } = require("he");
-import {VM} from 'vm2'
+import { VM } from "vm2";
 import bot from "./bot";
 
 let instance = new bot("techbot [e!]", "red");
@@ -24,12 +24,12 @@ instance.getVersion().then(() => {
           );
           break;
         case "s_eval":
-          let v = new VM()
+          let v = new VM();
           try {
             let _a = v.run(data.msg.slice(9));
             instance.sendMessage(">" + _a);
           } catch (e: any) {
-            instance.sendMessage(">"+e.toString());
+            instance.sendMessage(">" + e.toString());
           }
           break;
         case "u_eval":
