@@ -1,5 +1,5 @@
 const { decode } = require("he");
-import safeEval from "./safeEval";
+import {VM} from 'vm2'
 import bot from "./bot";
 
 let instance = new bot("techbot [e!]", "red");
@@ -24,8 +24,13 @@ instance.getVersion().then(() => {
           );
           break;
         case "s_eval":
-          let __unsafe = safeEval(data.msg.slice(9));
-          instance.sendMessage(`@${data.nick} res: ` + __unsafe);
+          let v = new VM()
+          try {
+            let _a = v.run(data.msg.slice(9));
+            instance.sendMessage(">" + _a);
+          } catch (e: any) {
+            instance.sendMessage(">"+e.toString());
+          }
           break;
         case "u_eval":
           if (data.home === "HMCFAS1GCE8771IAEJ7FEGF4ASJHASG8") {

@@ -49,7 +49,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:27.1.3"],
             ["ts-node", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:10.4.0"],
             ["ts-node-dev", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:1.1.8"],
-            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"],
+            ["vm2", "npm:3.9.5"]
           ],
           "linkType": "SOFT",
         }]
@@ -5367,7 +5368,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:27.1.3"],
             ["ts-node", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:10.4.0"],
             ["ts-node-dev", "virtual:9f71ae6540089fdb1ba02dced0c4409608db6198803324b7ba106afbe6a0d3d37769ba316b0330ee6225a427c740fe32fc5b60a30ba6cef74525977e5e79838b#npm:1.1.8"],
-            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"],
+            ["vm2", "npm:3.9.5"]
           ],
           "linkType": "SOFT",
         }]
@@ -5773,6 +5775,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/istanbul-lib-coverage", "npm:2.0.4"],
             ["convert-source-map", "npm:1.8.0"],
             ["source-map", "npm:0.7.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["vm2", [
+        ["npm:3.9.5", {
+          "packageLocation": "./.yarn/cache/vm2-npm-3.9.5-31b998d9a4-d83dbe929c.zip/node_modules/vm2/",
+          "packageDependencies": [
+            ["vm2", "npm:3.9.5"]
           ],
           "linkType": "HARD",
         }]
