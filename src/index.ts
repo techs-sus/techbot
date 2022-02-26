@@ -8,13 +8,13 @@ instance.getVersion().then(() => {
   instance.onMessage = (_data) => {
     let data = _data;
     data.msg = decode(_data.msg);
-    let split = data.msg.split(" ")
+    let split = data.msg.split(" ");
     if (data.msg.startsWith("e!")) {
-      console.log(data.msg)
+      console.log(data.msg);
       switch (data.msg.slice(3)) {
         case "test":
           instance.sendMessage("test");
-          console.log("gud")
+          console.log("gud");
           break;
         case "version":
           instance.sendMessage(vstring);
