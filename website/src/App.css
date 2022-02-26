@@ -1,0 +1,49 @@
+code {
+	font-family: "Courier New", Courier, monospace;
+}
+
+.rainbow {
+	background-image: repeating-linear-gradient(
+		45deg,
+		violet,
+		indigo,
+		blue,
+		green,
+		yellow,
+		orange,
+		red,
+		violet
+	);
+	text-align: center;
+	background-size: 800% 800%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: rainbow 8s ease infinite;
+}
+
+@keyframes rainbow {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 25%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+body {
+	background-color: rgb(50, 50, 50);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+	padding: 10px;
+}
+
+.info {
+	border: 10px;
+	margin: 10px;
+}

@@ -26,7 +26,7 @@ class bot {
   constructor(nick: string, color: string, onFinished?: () => void) {
     this.nickname = nick;
     this.color = color;
-    this.socket = io("https://trollbox.party", {
+    this.socket = io("https://cyio.trollbox.party", {
       path: "/api/v0/si",
       transports: ["websocket"],
     });
